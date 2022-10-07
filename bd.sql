@@ -21,7 +21,8 @@ CREATE TABLE partida (
 	duracion INT, -- Este campo se actualizará al acabar la partida
 	ganador INT, -- Este campo se actualizará al acabar la partida
 	
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (ganador) REFERENCES jugador (id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE partidas_jugadas (
